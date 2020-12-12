@@ -1,9 +1,7 @@
-import React from 'react'
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
+import React from 'react';
+import { TableHead, TableRow, TableCell } from '@material-ui/core';
 
-export default function EventsTableHead() {
+function EventsTableHead() {
     return (
         <TableHead>
             <TableRow>
@@ -16,3 +14,5 @@ export default function EventsTableHead() {
         </TableHead>
     );
 }
+
+export default EventsTableHead;

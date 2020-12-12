@@ -1,9 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import NavigationBarItem from './NavigationBarItem.js';
+import SimpleMenu from '../NavigationBar/NavigationBarItem/NavigationBarItem.js';
+import { Typography, AppBar, Toolbar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,14 +13,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavigationBar() {
+function HeaderName() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <NavigationBarItem />
+          <SimpleMenu />
           <Typography variant="h6" color="inherit">
             Мониторинг Системы терминалов контроля доступа
           </Typography>
@@ -30,3 +29,5 @@ export default function NavigationBar() {
     </div>
   );
 }
+
+export default HeaderName; 

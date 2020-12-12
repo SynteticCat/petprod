@@ -1,0 +1,19 @@
+/* WORKSPACE */
+.workspace {
+    display: flex;
+    margin-top: 13px;
+    justify-content: space-evenly;
+}
+
+/* TABLE */
+.table {
+    flex-grow: 0.9;
+}
+
+/* PANEL */
+.panel {
+    padding: 13px 30px 26px 30px;
+    margin: 0 20px;
+    border: 1px solid #000;
+    flex-grow: 0;
+}

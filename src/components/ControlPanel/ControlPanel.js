@@ -1,19 +1,28 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-// import EventTimerRange from './EventTimeRange/EventTimeRange.js';
-import styles from './style.module.css';
+import { Card, CardMedia, CardContent, Typography } from "@material-ui/core";
+import Event from './EventComponent';
+import User from './UserComponent';
+import Owner from './OwnerComponent';
 
-export default function SimpleContainer() {
+function ControlPanel() {
   return (
-    <div className={styles.panel}>
-      <CssBaseline />
-      <Container maxWidth="sm">
-        <Typography component="div" style={{ backgroundColor: '#ffffff', height: '50vh', weight: '50vh' }}> 
-        {/* <EventTimerRange /> */}
-        </Typography>
-      </Container>
-    </div>
+      <Card>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="100px"
+          style={{width: "500px"}}
+          image="assets/images/contemplative-reptile.jpg"
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography variant="h5" component="h2">Фильтры</Typography>
+          <Event />
+          <Owner />
+          <User />
+        </CardContent>
+    </Card>
   );
 }
+
+export default ControlPanel;
